@@ -27419,17 +27419,36 @@ var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _resCard = require("./ResCard");
 var _resCardDefault = parcelHelpers.interopDefault(_resCard);
-const resList = [
-    {
-        name: "Restaurant 1",
-        ratings: "4"
-    },
-    {
-        name: "Restaurant 2",
-        ratings: "5"
-    }
-];
+var _s = $RefreshSig$();
 const Body = ()=>{
+    _s();
+    // using state variables
+    const [resList, setResList] = (0, _reactDefault.default).useState([
+        {
+            name: "Restaurant 1",
+            ratings: "4",
+            prize: "500"
+        },
+        {
+            name: "Restaurant 2",
+            ratings: "5"
+        },
+        {
+            name: "Restaurant 3",
+            ratings: "4.9",
+            prize: "500"
+        },
+        {
+            name: "Restaurant 4",
+            ratings: "4",
+            prize: "50"
+        },
+        {
+            name: "Restaurant 5",
+            ratings: "2.9",
+            prize: "50"
+        }
+    ]);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "Body-component",
         children: [
@@ -27438,7 +27457,7 @@ const Body = ()=>{
                 children: "search"
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 18,
+                lineNumber: 34,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27446,17 +27465,17 @@ const Body = ()=>{
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
                     className: "filter-button",
                     onClick: ()=>{
-                        alert("Filter button clicked");
+                        setResList(resList.filter((res)=>res.ratings >= 4));
                     },
                     children: "Filter"
                 }, void 0, false, {
                     fileName: "src/components/Body.js",
-                    lineNumber: 20,
+                    lineNumber: 36,
                     columnNumber: 9
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 19,
+                lineNumber: 35,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27466,29 +27485,30 @@ const Body = ()=>{
                     children: resList.map((res)=>{
                         return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _resCardDefault.default), {
                             resData: res
-                        }, void 0, false, {
+                        }, res.id, false, {
                             fileName: "src/components/Body.js",
-                            lineNumber: 33,
+                            lineNumber: 49,
                             columnNumber: 20
                         }, undefined);
                     })
                 }, void 0, false, {
                     fileName: "src/components/Body.js",
-                    lineNumber: 31,
+                    lineNumber: 47,
                     columnNumber: 9
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 30,
+                lineNumber: 46,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/Body.js",
-        lineNumber: 17,
+        lineNumber: 33,
         columnNumber: 5
     }, undefined);
 };
+_s(Body, "i2VzZFAMv4A7PbfIqFeG32Qlulg=");
 _c = Body;
 var _c;
 $RefreshReg$(_c, "Body");
