@@ -1,6 +1,7 @@
 import React from "react";
 
 export const Heading = () => {
+  const [logBtn, setLogBtn] = React.useState("Login");
   return (
     <div className="Header-component">
       <div className="logo-container">
@@ -14,6 +15,14 @@ export const Heading = () => {
           <li>Home</li>
           <li>About</li>
           <li>Contact</li>
+          <button
+            className="login-button"
+            onClick={() => {
+              logBtn === "Logout" ? setLogBtn("Login") : setLogBtn("Logout");
+            }}
+          >
+            {logBtn}
+          </button>
         </ul>
       </div>
     </div>
